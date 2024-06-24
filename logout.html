@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+	<title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    .clock {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .time {
+      font-size: 50px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .date-time {
+      font-size: 20px;
+      color: #000000;
+    }
+
+    @media screen and (max-width: 768px) {
+      .time {
+        font-size: 50px;
+      }
+    }
+	
+	
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+  <div class="clock">
+    <div class="time"></div>
+    <div class="date-time"></div>
+  </div>
+  
+
+  <script>
+    var time = document.querySelector(".time");
+    var dateTime = document.querySelector(".date-time");
+
+    function updateClock() {
+      // Get the current time, day , month and year
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var day = now.getDay();
+      var date = now.getDate();
+      var month = now.getMonth();
+      var year = now.getFullYear();
+
+      // store day and month name in an array
+      var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+      // format date and time
+      hours = hours % 24 || 24;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      date = date < 10 ? "0" + date : date;
+
+      // display date and time
+      var period = hours < 12 ? "" : "";
+      time.innerHTML = hours + ":" + minutes + ":" + seconds + " " + period;
+      dateTime.innerHTML = dayNames[day] + ", " + monthNames[month] + " " + date + ", " + year;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+    
+
+	
+    <p>Logged In: admin</p>
+    <p>Session ID: 57chie1fnr1sqmcb05s</p>
+    <p>________________________</p>
+    <p> <button type="button"><a href="Impero/index.html">Impero</a></button> </p>
+     <p> <button type="button"><a href="games.html">Games</a></button> </p>
+     <p> <button type="button"><a href="links.html">Links</a></button> </p>
+     <p> <button type="button"><a href="gamelinks.html">Game Links</a></button> </p>
+	 <p> <button type="button"><a href="HTML\HTML-Games-V2-main\Stacker\index.html">Stacker</a></button> </p>
+
+
+      <button class="logout-btn">Logout</button>
+</div>
+<script src="./logout.js"></script>
+<script src="./logout2.js"></script>
+</body>
+</div>
+</div>
+</div>
+
+</html>
