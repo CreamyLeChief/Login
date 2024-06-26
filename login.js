@@ -22,12 +22,7 @@ function authentication(username,password){
         return true
     }else if (username === "hehehehawampro" && password === "7698"){
         return true
-	}else if (username === "BillyT2305" && password === "Mabel11"){
-        return true
-	}else if (username === "1" && password === "The-Quick-Brown-Fox-Jumped-Over-The-Lazy-Dog"){
-        return true
-	}else if (username === "Zazaloverxx" && password === "Kysplztysm"){
-        return true
+	
     } else {
 	    return false
     }
